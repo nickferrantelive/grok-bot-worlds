@@ -1,0 +1,35 @@
+{
+  "workspace": "Glitched Reality",
+  "island": "orbit-port",
+  "timezone": "America/Chicago",
+  "lead": {
+    "id": "hyperion",
+    "name": "Hyperion",
+    "role": "orchestrates the hive and signs off",
+    "schedule": "daily"
+  },
+  "bots": [
+    {
+      "id": "research",
+      "name": "Research",
+      "role": "finds markets, niches and briefs",
+      "color": "#3fd18b",
+      "schedule": "mon, wed, fri"
+    },
+    {
+      "id": "studio",
+      "name": "Studio",
+      "role": "makes stills, clips and characters",
+      "color": "#4d8dff",
+      "schedule": "daily"
+    },
+    {
+      "id": "publish",
+      "name": "Publish",
+      "role": "humanizes copy and ships live",
+      "color": "#ff7a2f",
+      "schedule": "daily"
+    }
+  ],
+  "source": { "mode": "demo" }
+}
