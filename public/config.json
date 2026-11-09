@@ -31,5 +31,9 @@
       "schedule": "daily"
     }
   ],
-  "source": { "mode": "demo" }
+  "source": {
+    "mode": "live",
+    "url": "https://tqjkfpxoqxvisftlyrmg.supabase.co/rest/v1/events",
+    "anon_key": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRxamtmcHhvcXh2aXNmdGx5cm1nIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTQyNDQyMTYsImV4cCI6MjEwOTgyMDIxNn0.UbGLfd9l-OqZ6Yme3u5iHngEWkBylBOcfe41rU9Pcs8"
+  }
 }
