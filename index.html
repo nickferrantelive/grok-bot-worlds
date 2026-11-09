@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0b0d12" />
+    <title>Grok Bot Worlds</title>
+    <style>
+      html, body { margin: 0; height: 100%; background: #0b0d12; overflow: hidden; }
+      #gi-canvas { position: fixed; inset: 0; width: 100%; height: 100%; display: block; touch-action: none; }
+    </style>
+    <script>
+      // Capture mode: time, frames and random come only from window.__capture, stepped by tools/record.mjs.
+      (function () {
+        var q = new URLSearchParams(location.search);
+        if (q.get('capture') !== '1') return;
+        var base = Date.parse(q.get('capture_now') || '2026-03-16T15:00:00Z');
+        var vt = 0;
+        var nextId = 1;
+        var queue = new Map();
+        var RealDate = Date;
+        class VirtualDate extends RealDate {
+          constructor() {
+            if (arguments.length) super(...arguments);
+            else super(base + vt);
+          }
+          static now() { return base + vt; }
+        }
+        window.Date = VirtualDate;
+        performance.now = function () { return vt; };
+        window.requestAnimationFrame = function (cb) { var id = nextId++; queue.set(id, cb); return id; };
+        window.cancelAnimationFrame = function (id) { queue.delete(id); };
+        var s = 0x9e3779b9;
+        Math.random = function () {
+          s |= 0; s = (s + 0x6d2b79f5) | 0;
+          var r = Math.imul(s ^ (s >>> 15), 1 | s);
+          r = (r + Math.imul(r ^ (r >>> 7), 61 | r)) ^ r;
+          return ((r ^ (r >>> 14)) >>> 0) / 4294967296;
+        };
+        window.__capture = {
+          advance: function (dtMs) {
+            vt += dtMs;
+            var run = Array.from(queue.values());
+            queue.clear();
+            run.forEach(function (cb) { cb(vt); });
+          },
+        };
+        document.documentElement.classList.add('gi-capture');
+      })();
+    </script>
+  </head>
+  <body>
+    <canvas id="gi-canvas" aria-label="A live 3D island showing a team of bots at work"></canvas>
+    <div id="gi-ui"></div>
+    <script type="module" src="/engine/main.js"></script>
+  </body>
+</html>

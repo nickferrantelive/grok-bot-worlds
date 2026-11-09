@@ -1,0 +1,226 @@
+{
+  "speed": 6,
+  "lead_in": 1,
+  "events": [
+    {
+      "id": "scripted-0",
+      "bot_id": "research",
+      "type": "working",
+      "text": "reading new mentions",
+      "timestamp": "2026-03-16T15:00:00.000Z"
+    },
+    {
+      "id": "scripted-1",
+      "bot_id": "research",
+      "type": "found",
+      "text": "4 mentions worth a reply",
+      "timestamp": "2026-03-16T15:00:06.000Z",
+      "value": 4
+    },
+    {
+      "id": "scripted-2",
+      "bot_id": "research",
+      "type": "done",
+      "text": "on to writer: mentions sorted, 4 flagged",
+      "timestamp": "2026-03-16T15:00:12.000Z"
+    },
+    {
+      "id": "scripted-3",
+      "bot_id": "research",
+      "type": "idle",
+      "text": "waiting for the next job",
+      "timestamp": "2026-03-16T15:00:18.000Z"
+    },
+    {
+      "id": "scripted-4",
+      "bot_id": "writer",
+      "type": "working",
+      "text": "from research: drafting the weekly summary",
+      "timestamp": "2026-03-16T15:00:30.000Z"
+    },
+    {
+      "id": "scripted-5",
+      "bot_id": "writer",
+      "type": "found",
+      "text": "a number worth a second look",
+      "timestamp": "2026-03-16T15:00:36.000Z"
+    },
+    {
+      "id": "scripted-6",
+      "bot_id": "writer",
+      "type": "done",
+      "text": "on to inbox: summary written, one page",
+      "timestamp": "2026-03-16T15:00:42.000Z"
+    },
+    {
+      "id": "scripted-7",
+      "bot_id": "writer",
+      "type": "idle",
+      "text": "waiting for the next job",
+      "timestamp": "2026-03-16T15:00:48.000Z"
+    },
+    {
+      "id": "scripted-8",
+      "bot_id": "inbox",
+      "type": "working",
+      "text": "from writer: sorting the inbox",
+      "timestamp": "2026-03-16T15:01:00.000Z"
+    },
+    {
+      "id": "scripted-9",
+      "bot_id": "inbox",
+      "type": "found",
+      "text": "120 messages need an answer",
+      "timestamp": "2026-03-16T15:01:06.000Z",
+      "value": 120
+    },
+    {
+      "id": "scripted-10",
+      "bot_id": "inbox",
+      "type": "needs_approval",
+      "text": "a draft reply is ready to send",
+      "timestamp": "2026-03-16T15:01:12.000Z"
+    },
+    {
+      "id": "scripted-11",
+      "bot_id": "inbox",
+      "type": "done",
+      "text": "on to lead: inbox down to zero",
+      "timestamp": "2026-03-16T15:01:22.000Z"
+    },
+    {
+      "id": "scripted-12",
+      "bot_id": "inbox",
+      "type": "idle",
+      "text": "waiting for the next job",
+      "timestamp": "2026-03-16T15:01:28.000Z"
+    },
+    {
+      "id": "scripted-13",
+      "bot_id": "lead",
+      "type": "working",
+      "text": "reviewing what inbox sent",
+      "timestamp": "2026-03-16T15:01:40.000Z"
+    },
+    {
+      "id": "scripted-14",
+      "bot_id": "lead",
+      "type": "done",
+      "text": "signed off, the batch is finished",
+      "timestamp": "2026-03-16T15:01:47.000Z"
+    },
+    {
+      "id": "scripted-15",
+      "bot_id": "research",
+      "type": "working",
+      "text": "scanning competitor pages",
+      "timestamp": "2026-03-16T15:01:48.000Z"
+    },
+    {
+      "id": "scripted-16",
+      "bot_id": "lead",
+      "type": "idle",
+      "text": "waiting for the next batch",
+      "timestamp": "2026-03-16T15:01:52.000Z"
+    },
+    {
+      "id": "scripted-17",
+      "bot_id": "research",
+      "type": "found",
+      "text": "a new pricing page",
+      "timestamp": "2026-03-16T15:01:54.000Z"
+    },
+    {
+      "id": "scripted-18",
+      "bot_id": "research",
+      "type": "done",
+      "text": "on to writer: changes logged",
+      "timestamp": "2026-03-16T15:02:00.000Z"
+    },
+    {
+      "id": "scripted-19",
+      "bot_id": "research",
+      "type": "idle",
+      "text": "waiting for the next job",
+      "timestamp": "2026-03-16T15:02:06.000Z"
+    },
+    {
+      "id": "scripted-20",
+      "bot_id": "writer",
+      "type": "working",
+      "text": "from research: writing post ideas",
+      "timestamp": "2026-03-16T15:02:18.000Z"
+    },
+    {
+      "id": "scripted-21",
+      "bot_id": "writer",
+      "type": "found",
+      "text": "120 angles that could work",
+      "timestamp": "2026-03-16T15:02:24.000Z",
+      "value": 120
+    },
+    {
+      "id": "scripted-22",
+      "bot_id": "writer",
+      "type": "done",
+      "text": "on to inbox: 120 ideas saved to the list",
+      "timestamp": "2026-03-16T15:02:30.000Z"
+    },
+    {
+      "id": "scripted-23",
+      "bot_id": "writer",
+      "type": "idle",
+      "text": "waiting for the next job",
+      "timestamp": "2026-03-16T15:02:36.000Z"
+    },
+    {
+      "id": "scripted-24",
+      "bot_id": "inbox",
+      "type": "working",
+      "text": "from writer: drafting the weekly summary",
+      "timestamp": "2026-03-16T15:02:48.000Z"
+    },
+    {
+      "id": "scripted-25",
+      "bot_id": "inbox",
+      "type": "found",
+      "text": "a number worth a second look",
+      "timestamp": "2026-03-16T15:02:54.000Z"
+    },
+    {
+      "id": "scripted-26",
+      "bot_id": "inbox",
+      "type": "done",
+      "text": "on to lead: summary written, one page",
+      "timestamp": "2026-03-16T15:03:00.000Z"
+    },
+    {
+      "id": "scripted-27",
+      "bot_id": "inbox",
+      "type": "idle",
+      "text": "waiting for the next job",
+      "timestamp": "2026-03-16T15:03:06.000Z"
+    },
+    {
+      "id": "scripted-28",
+      "bot_id": "lead",
+      "type": "working",
+      "text": "checking the batch from inbox",
+      "timestamp": "2026-03-16T15:03:18.000Z"
+    },
+    {
+      "id": "scripted-29",
+      "bot_id": "lead",
+      "type": "done",
+      "text": "all clear, the batch is out",
+      "timestamp": "2026-03-16T15:03:25.000Z"
+    },
+    {
+      "id": "scripted-30",
+      "bot_id": "lead",
+      "type": "idle",
+      "text": "waiting for the next batch",
+      "timestamp": "2026-03-16T15:03:30.000Z"
+    }
+  ]
+}

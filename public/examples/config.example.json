@@ -1,0 +1,11 @@
+{
+  "workspace": "Small team",
+  "island": "orbit-port",
+  "timezone": "America/New_York",
+  "lead": { "id": "lead", "name": "lead", "role": "signs off what the line sends", "schedule": "daily" },
+  "bots": [
+    { "id": "research", "name": "research", "role": "finds what buyers talk about", "color": "#3fd18b", "schedule": "mon, thu" },
+    { "id": "writer", "name": "writer", "role": "turns it into drafts", "color": "#ff4d8d", "schedule": "tue, fri" },
+    { "id": "inbox", "name": "inbox", "role": "sends the drafts and answers the replies", "color": "#ff7a2f", "schedule": "daily" }
+  ]
+}

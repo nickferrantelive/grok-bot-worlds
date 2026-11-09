@@ -1,0 +1,26 @@
+{
+  "name": "grok-bot-worlds",
+  "private": true,
+  "version": "1.0.0",
+  "license": "MIT",
+  "type": "module",
+  "description": "Live 3D worlds that show your team of AI bots at work.",
+  "scripts": {
+    "dev": "vite --port 3260 --strictPort",
+    "build": "vite build",
+    "preview": "vite preview --port 3260 --strictPort",
+    "test": "node --test \"engine/test/unit/*.test.js\"",
+    "test:sql": "node --test \"supabase/test/*.test.mjs\"",
+    "test:e2e": "node engine/test/e2e.mjs",
+    "test:secrets": "node tools/check-secrets.mjs --self-test && vite build && node tools/check-secrets.mjs",
+    "record": "node tools/record.mjs"
+  },
+  "dependencies": {
+    "three": "^0.170.0"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.2.17",
+    "playwright": "1.63.0",
+    "vite": "^6.0.0"
+  }
+}

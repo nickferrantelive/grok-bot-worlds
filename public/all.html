@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Grok Bot Worlds</title>
+<style>
+  html, body { margin: 0; height: 100%; overflow: hidden; background: #000; }
+  /* Four worlds, edge to edge, square corners, one thin clean line between them. */
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 3px;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    background: #000;
+  }
+  .pane {
+    position: relative;
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+    background: #000;
+    opacity: 0;
+    transition: opacity 900ms ease;
+  }
+  .pane.on { opacity: 1; }
+  iframe { display: block; width: 100%; height: 100%; border: 0; }
+  @media (prefers-reduced-motion: reduce) { .pane { transition: none; } }
+</style>
+</head>
+<body>
+<main class="grid">
+  <div class="pane"><iframe aria-label="Arctic Grid" src="./?island=arctic-grid&amp;quality=desktop"></iframe></div>
+  <div class="pane"><iframe aria-label="Hover Isles" src="./?island=hover-isles&amp;quality=desktop"></iframe></div>
+  <div class="pane"><iframe aria-label="Orbit Port" src="./?island=orbit-port&amp;quality=desktop"></iframe></div>
+  <div class="pane"><iframe aria-label="Chrome Citadel" src="./?island=chrome-citadel&amp;quality=desktop"></iframe></div>
+</main>
+<script>
+  // Each world fades in once it has its first frame, never as a black box or a loading line.
+  for (const pane of document.querySelectorAll('.pane')) {
+    const frame = pane.querySelector('iframe');
+    const check = () => {
+      try {
+        if (frame.contentWindow.__ready === true) { pane.classList.add('on'); return; }
+      } catch (err) {
+        pane.classList.add('on');
+        return;
+      }
+      setTimeout(check, 200);
+    };
+    frame.addEventListener('load', check);
+    setTimeout(() => pane.classList.add('on'), 15000);
+  }
+</script>
+</body>
+</html>

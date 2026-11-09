@@ -1,0 +1,29 @@
+# Dependencies and build output
+node_modules/
+dist/
+out/
+
+# Work files, screenshots and the progress board stay local
+.work/
+look/
+board/
+BUILD_BRIEF.md
+BUILD_PLATE.md
+
+# Reference images are never published
+references-shared/
+**/references/
+
+# Blender saves, caches and old versions of the scripts
+*.blend
+*.blend1
+__pycache__/
+blender/**/*_snapshot.py
+blender/**/*_pre_plate.py
+blender/arctic-grid/island_look.py
+blender/arctic-grid/world_look.py
+blender/hover-isles/batch_previews.py
+
+.DS_Store
+.env
+.env.*
