@@ -27,3 +27,4 @@ blender/hover-isles/batch_previews.py
 .DS_Store
 .env
 .env.*
+.vercel
